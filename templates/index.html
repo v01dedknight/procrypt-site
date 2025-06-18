@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ProCrypt — Главная</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Стили для кнопки возврата наверх */
+        .back-to-top {
+            position: fixed;
+            bottom: 60px; /* Чтобы текст не перекрывался, увеличен отступ */
+            right: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: none; /* Скрыта по умолчанию */
+        }
+
+        .back-to-top:hover {
+            background-color: #0056b3;
+        }
+
+        /* Стили для раздела популярных вопросов */
+        .faq {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq h2 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .faq dl {
+            margin-top: 20px;
+        }
+
+        .faq dt {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .faq dd {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        /* Дополнительное пространство между вопросами */
+        .faq dd {
+            margin-bottom: 30px; /* Расстояние между ответами увеличено */
+        }
+
+        /* Стили для футера */
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 100px; /* Отступ сверху, чтобы футер был ниже кнопки */
+        }
+
+        /* Футер всегда внизу */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        /* Пустое пространство внизу страницы для кнопки */
+        .spacer {
+            height: 80px; /* Площадь = высота кнопки */
+        }
+    </style>
+</head>
+<body>
+    <header class="scroll-animation">
+        <h1>ProCrypt | Профессиональный менеджер паролей</h1>
+        <p>Сайт целиком и полностью посвящён авторскому проекту ProCrypt. Вы можете ознакомиться с дополнительной информацией:</p>
+        <nav>
+            <a href="/about">О приложении</a> |
+            <a href="/developer">Разработчик</a> | 
+            <a href="/download">Скачать</a>
+        </nav>
+    </header>
+    <main>
+        <section class="fade-in">
+            <h2>Зачем использовать ProCrypt?</h2>
+            <p>Потому что ваша цифровая безопасность — приоритет.</p>
+        </section>
+
+        <!-- Популярные вопросы -->
+        <section class="faq">
+            <h2 class="fade-in">Популярные вопросы</h2>
+            <dl class="fade-in">
+                <dt>На каких аппаратных платформах доступен ProCrypt?</dt>
+                <dd>В данный момент ProCrypt доступен для компьютеров. Вы можете отслеживать создание новых версий на GitHub (подробнее во вкладке "Разработчик")</dd>
+
+                <dt>Как установить ProCrypt?</dt>
+                <dd>Всё уже собрано в 1 архив. Установить - на вкладке "Скачать" вверху страницы</dd>
+
+                <dt>Как научиться пользоваться приложением?</dt>
+                <dd>Ваше время ценно. В приложении предусмотрены справки, с подробным описанием функционала всего приложения.</dd>
+
+                <dt>Как работает шифрование в ProCrypt?</dt>
+                <dd>ProCrypt использует алгоритм шифрования AES-256 для защиты всей базы данных. При шифровании создаётся специальный файл, для усиления защиты. Ваши данные защищены мастер-паролем</dd>
+
+                <dt>Как происходит оценка "защищённости" пароля?</dt>
+                <dd>На вкладке "Проверка пароля" ваш пароль проверяется при помощи специальной математической формулы, специально составленной, для имитации перебора методом brute-force (эти данные можно использовать только для справки)</dd>
+
+                <dt>Как я могу помочь проекту?</dt>
+                <dd>Всегда приятно получить поддержку в нужную минуту. Обратите внимание на реквизиты Разработчика, указанные на этом сайте.</dd>
+            </dl>
+        </section>
+        
+    </main>
+
+    <!-- Кнопка "Наверх" -->
+    <button class="back-to-top" id="backToTop">Наверх</button>
+
+    <!-- Пустое место внизу страницы для кнопки -->
+    <div class="spacer"></div>
+
+    <!-- Футер -->
+    <footer>
+        <p>&copy; 2025 ProCrypt. Все права защищены.</p>
+    </footer>
+
+    <script>
+        // Скрипт для отображения кнопки возврата наверх
+        window.onscroll = function() {
+            var button = document.getElementById("backToTop");
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                button.style.display = "block"; // Если прокрутка больше 100px показать кнопку
+            } else {
+                button.style.display = "none"; // Если прокрутка меньше 100px скрыть кнопку
+            }
+        };
+
+        // Прокрутка страницы наверх
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+</html>

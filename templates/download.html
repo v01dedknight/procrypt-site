@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Скачивание ProCrypt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="scroll-animation">
+        <h1>Скачивание ProCrypt</h1>
+        <p>Спасибо за выбор ProCrypt! Ниже вы можете скачать доступные версии программы или вернуться на главную страницу.</p>
+    </header>
+
+    <main>
+        <section class="fade-in">
+            <h2>Доступные версии:</h2>
+            <ul>
+                <li>Версия release 1.0 — <a href="/download_app_1.0" download>Скачать</a></li>
+                <li>Версия release 2.0 — <a href="/download_app_2.0" download>Скачать</a></li>
+                <li>Версия release 2.1 — <a href="/download_app_2.1" download>Скачать</a></li>
+                <li>Версия release 2.2 (Последняя версия)— <a href="/download_app_2.2" download>Скачать</a></li>
+                <!-- Добавление новых версий по мере их появления -->
+            </ul>
+        </section>
+
+        <section>
+            <p class="fade-in">Если вам понравился ProCrypt, поддержите проект. Ваши отзывы и рекомендации помогают нам становиться лучше!</p>
+        </section>
+
+        <section>
+            <!-- Кнопка для возврата на главную страницу -->
+            <a href="/" class="back-to-home-button">Вернуться на главную</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ProCrypt. Все права защищены. Благодарим за поддержку!</p>
+    </footer>
+
+    <style>
+        .back-to-home-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .back-to-home-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 100px;
+        }
+    </style>
+</body>
+</html>

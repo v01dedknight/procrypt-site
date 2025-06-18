@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>О ProCrypt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="scroll-animation">
+        <h1>ProCrypt — О приложении</h1>
+        <nav>
+            <a href="/">Главная</a>
+            <a href="/download">Скачать</a>
+            <a href="/developer">Разработчик</a>
+        </nav>
+    </header>
+    <main>
+        <section class="fade-in">
+            <p>Приложение ProCrypt предоставляет пользователю обширный функционал:</p>
+            <ul class="feature-list">
+                <li class="feature-item">
+                    Скачать полную документацию — <a href="/download_doc" download>Скачать</a>
+                </li>
+                <li class="feature-item">
+                    <img src="{{ url_for('static', filename='images/password_manager.png') }}" alt="Менеджер паролей" class="feature-image">
+                    Безопасный менеджер паролей с шифрованием мастер-паролем.
+                    Комментарий разработчика: не потеряйте мастер-пароль! Его невозможно будет восстановить.
+                </li>
+                <li class="feature-item">
+                    <img src="{{ url_for('static', filename='images/password_generation.png') }}" alt="Генерация паролей" class="feature-image">
+                    Генерация надёжных паролей с гибкими настройками.
+                    Комментарий разработчика: специалисты по кибербезопасности рекомендуют составлять пароль длиной от 16 символов, содержащий символы нижнего и верхнего регистра, цифры и спец. символы.
+                </li>
+                <li class="feature-item">
+                    <img src="{{ url_for('static', filename='images/password_security.png') }}" alt="Проверка паролей" class="feature-image">
+                    Проверка и оценка устойчивости паролей.
+                    Комментарий разработчика: на перебор одного сложного пароля могут уйти годы времени. Давайте будем ценить наше время, и не облегчать задачу злоумышленникам.
+                </li>
+                <li class="feature-item">
+                    <img src="{{ url_for('static', filename='images/metadata_cleanup.png') }}" alt="Очистка метаданных" class="feature-image">
+                    Очистка метаданных в медиафайлах.
+                    Комментарий разработчика: метаданные - это данные о данных. По ним можно вычислить модель устройства, дату и время съёмки, и даже местоположение.
+                </li>
+                <li class="feature-item">
+                    <img src="{{ url_for('static', filename='images/encrypted_archives.png') }}" alt="Зашифрованные архивы" class="feature-image">
+                    Специальные возможности при создании зашифрованных архивов.
+                    Комментарий разработчика: вы можете создать сортированный архив по категориям формата файлов (Видео, Фото и т.д.), и сразу же сохранить пароль в вашу локальную базу данных.
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <a class="color-change" href="/">← Назад</a>
+    </footer>
+</body>
+</html>

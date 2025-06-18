@@ -1,0 +1,227 @@
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #f1f1f1);
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 30px 40px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 40px;
+}
+
+section.highlight {
+    background-color: #e3f2fd;
+    border-left: 6px solid #1a73e8;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+footer {
+    background-color: #1a73e8;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #1a73e8;
+}
+
+a:hover {
+    color: #0f5cd3;
+}
+
+.footer-link {
+    color: white !important;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Мобильная адаптация */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section.highlight {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        margin: 5px 0;
+        font-size: 0.9em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section.highlight {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+/* Скрытие элемента */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* продолжительность */
+}
+
+/* Анимация fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: scrollIn 1s forwards;
+}
+
+@keyframes scrollIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Изменение цвета */
+@keyframes colorChange {
+    0% {
+        background-color: #1a73e8; /* начальный цвет */
+    }
+    50% {
+        background-color: #0f5cd3; /* промежуточный цвет */
+    }
+    100% {
+        background-color: #1a73e8; /* конечный цвет */
+    }
+}
+
+.color-change {
+    animation: colorChange 3s infinite; /* для одного цикла */
+}
+
+/* Стили для списка и его элементов */
+ul.feature-list {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    list-style-type: none; /* Стандартные маркеры списка */
+}
+
+ul.feature-list .feature-item {
+    display: flex;
+    align-items: center; /* Элементы центрированы по вертикали */
+    margin-bottom: 20px; /* Отступы между пунктами списка */
+    justify-content: flex-start; /* Элементы слева */
+}
+
+.feature-item img.feature-image {
+    width: 500px; /* Увеличение ширины изображений */
+    height: auto; /* Автоматическое сохранение пропорций */
+    margin-right: 15px; /* Отступ справа от изображения */
+}
+
+.feature-item {
+    width: 100%; /* Установка ширины элемента списка на всю доступную ширину */
+}
+
+.feature-item span {
+    flex-grow: 1; /* Сжатие текста, если изображение занимает много места */
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 80px; /* Увеличение отступа, чтобы кнопка была выше */
+    right: 20px; /* Положение справа */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Тень для кнопки */
+    z-index: 1000;
+}
