@@ -1,58 +1,57 @@
 # ProCrypt Web
 
-Веб-сайт для приложения ProCrypt - это информационный портал, позволяющий пользователям ознакомиться с возможностями программы, скачать доступные версии и найти ответы на часто задаваемые вопросы.
+ProCrypt Web is the official information portal for the ProCrypt application. It allows users to explore the program's features, download available versions, and find answers to frequently asked questions.
 
-## Структура сайта
+## Website Architecture
 
-Сайт разработан с использованием Python и микрофреймворка Flask. Интерфейс построен на HTML-шаблонах с применением Jinja2. Статические ресурсы (стили, скрипты, изображения) находятся в папке static.
+The site is built using Python and the Flask micro-framework. The interface is rendered using Jinja2 HTML templates. All static assets (styles, scripts, images) are organized within the static directory.
 
-Основные маршруты сайта:
+## Key Routes:
 
-/ — главная страница с описанием приложения  
-/about — раздел с часто задаваемыми вопросами  
-/download — страница загрузки, где представлены все доступные версии приложения  
-/developer — информация о разработчике
+1. / — Home page with a detailed application overview.
+2. /about — FAQ section and general information.
+3. /download — Download center featuring all available application builds.
+4. /developer — Information about the creator and the project's background.
 
-Файлы для скачивания:
+## Available Downloads:
 
-- Приложение ProCrypt (в нескольких версиях)
-- Архив с документацией (ProCrypt-main.zip)
+- ProCrypt Application: Multiple versions tailored for different platforms.
+- Documentation: A comprehensive archive (ProCrypt-main.zip) for advanced users.
 
-## Структура проекта
+## Project Structure
 
 .
-├── app.py               # основной файл Flask-приложения  
-├── templates/           # HTML-шаблоны  
-├── static/              # стили, скрипты, изображения, файлы для скачивания  
+├── app.py               # Main Flask application entry point
+├── templates/           # Jinja2 HTML templates
+├── static/              # Static assets and downloadable files
 │   ├── css/  
 │   ├── js/  
 │   ├── images/  
 │   └── files/  
-├── requirements.txt     # зависимости  
-└── .gitignore           # исключения для Git
+├── requirements.txt     # Project dependencies
+└── .gitignore           # Git exclusion rules
 
-## Запуск локально
+## Local Setup
 
-1. Установите зависимости:
+1. Install dependencies:
    pip install -r requirements.txt
 
-2. Запустите приложение:
+2. Run the application:
    python app.py
 
-3. Откройте в браузере:
+3. View in browser:
    http://localhost:5000/
 
-## Используемые технологии
-
+## Tech Stack
+Backend:
 - Python 3  
-- Flask  
+- Flask
+Frontend:
 - HTML (Jinja2)  
 - CSS / JS
 
-## Установка и распространение
+## Deployment & Distribution
+The project is lightweight and does not require a database, making it easy to run locally or host on any WSGI server (such as Gunicorn or PythonAnywhere). Virtual environments and compiled Python files are excluded from the repository via .gitignore to ensure a clean codebase.
 
-Проект не требует базы данных и может быть запущен локально или размещён на любом WSGI-сервере. Виртуальная среда и скомпилированные Python-файлы исключены из репозитория через .gitignore.
-
-## Лицензия
-
-Проект предоставляется "как есть" (as is) без каких-либо гарантий. Использование осуществляется на ваш страх и риск.
+## License
+This project is provided "as is" without any warranties. Use at your own risk.
